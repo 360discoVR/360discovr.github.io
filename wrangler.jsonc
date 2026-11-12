@@ -1,0 +1,14 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "360discovr",
+  "compatibility_date": "2026-11-01",
+  "routes": [
+    { "pattern": "360discovr.com", "custom_domain": true },
+    { "pattern": "www.360discovr.com", "custom_domain": true }
+  ],
+  "assets": {
+    "directory": "./",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page"
+  }
+}
