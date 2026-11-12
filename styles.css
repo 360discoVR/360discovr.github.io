@@ -123,21 +123,28 @@ img { display: block; width: 100%; height: auto; }
 .footer .brand { margin-right: auto; }
 .footer .text-link { color: var(--muted); font-size: .9rem; }
 
+.archive-page { scroll-behavior: auto; }
 .archive-header { grid-template-columns: 1fr auto; }
 .archive-header > .text-link { font-size: .9rem; }
 .archive-intro { padding-block: clamp(2.75rem, 6vw, 5.5rem) clamp(2rem, 4vw, 3.75rem); }
 .archive-intro h1 { font-size: clamp(3rem, 8vw, 7rem); }
 .archive-intro p { max-width: 58ch; margin-top: 1rem; color: var(--muted); }
-.archive-years { display: flex; flex-wrap: wrap; gap: 0 clamp(1rem, 2.4vw, 2rem); margin-top: 1.5rem; border-top: 1px solid #ffffff26; }
-.archive-years a { display: inline-flex; min-height: 2.75rem; align-items: center; color: var(--accent); font-size: .9rem; font-weight: 700; }
-.archive-years a:hover { text-decoration: underline; text-underline-offset: .25em; }
+.archive-menu { position: sticky; top: 0; z-index: 2; background: var(--black); border-block: 1px solid #ffffff26; }
+.archive-menu-inner { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: .75rem; }
+.archive-years { display: flex; gap: clamp(.85rem, 2.4vw, 2rem); overflow-x: auto; scrollbar-width: thin; }
+.archive-years a, .archive-to-top { display: inline-flex; flex: none; min-height: 2.75rem; align-items: center; white-space: nowrap; font-size: .9rem; font-weight: 700; }
+.archive-years a { color: var(--accent); }
+.archive-years a:focus-visible { outline-offset: -2px; }
+.archive-to-top { padding-left: .75rem; border-left: 1px solid #ffffff26; }
+.archive-menu a:hover { text-decoration: underline; text-underline-offset: .25em; }
 .archive-list { padding-block: clamp(1.75rem, 4vw, 3.5rem) var(--section-space); }
 .archive { background: var(--paper); }
 .archive-intro { background: var(--black); }
 .archive-list { color-scheme: light; color: var(--black); }
 .archive-year { display: grid; grid-template-columns: minmax(6rem, .24fr) minmax(0, 1fr); gap: clamp(1rem, 4vw, 4.5rem); padding-block: clamp(1.5rem, 4vw, 3.5rem); border-top: 1px solid #b6aca2; }
-.archive-year h2 { font-size: clamp(2.55rem, 5.2vw, 5rem); text-wrap: unset; scroll-margin-top: 1rem; }
-.archive-project { padding-block: 1.5rem; scroll-margin-top: 1rem; }
+.archive-list :is(h2, article, a) { scroll-margin-top: 4.5rem; }
+.archive-year h2 { font-size: clamp(2.55rem, 5.2vw, 5rem); text-wrap: unset; }
+.archive-project { padding-block: 1.5rem; }
 .archive-project:first-child { padding-top: 0; }
 .archive-project:last-child { padding-bottom: 0; }
 .archive-project + .archive-project { border-top: 1px solid #b6aca2; }
@@ -145,8 +152,8 @@ img { display: block; width: 100%; height: auto; }
 .archive-project h3 { font-size: clamp(1.6rem, 3.15vw, 3rem); }
 .archive-copy p { max-width: 66ch; margin-top: .65rem; color: var(--paper-muted); }
 .archive-project .archive-date { margin: 0 0 .55rem; font-size: .88rem; font-weight: 600; }
-.archive-cover { max-height: 17rem; width: auto; max-width: 100%; justify-self: end; }
-.archive-project-poster .archive-cover { width: 100%; aspect-ratio: 3 / 2; object-fit: contain; background: white; }
+.archive-cover { width: 100%; max-height: 17rem; object-fit: contain; object-position: right top; }
+.archive-project-poster .archive-cover { aspect-ratio: 3 / 2; object-position: center; background: white; }
 
 @media (max-width: 960px) {
   .work-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -166,6 +173,14 @@ img { display: block; width: 100%; height: auto; }
   .contact-inner { flex-direction: column; align-items: flex-start; }
 }
 
+@media (max-width: 640px) {
+  .archive-menu-inner { gap: .5rem; }
+  .archive-years { display: grid; grid-template-columns: repeat(5, minmax(2rem, 1fr)); gap: 0 .2rem; }
+  .archive-years a { justify-content: center; font-size: .8rem; }
+  .archive-to-top { padding-left: .5rem; font-size: .8rem; }
+  .archive-list :is(h2, article, a) { scroll-margin-top: 6.75rem; }
+}
+
 @media (max-width: 560px) {
   .primary-nav { font-size: .86rem; }
   .hero { display: grid; }
@@ -183,7 +198,7 @@ img { display: block; width: 100%; height: auto; }
   .footer { flex-wrap: wrap; }
   .footer .brand { flex-basis: 100%; }
   .archive-year, .archive-project-media { grid-template-columns: 1fr; gap: 1rem; }
-  .archive-cover { justify-self: start; }
+  .archive-project-media:not(.archive-project-poster) .archive-cover { object-position: left top; }
 }
 
 @media (max-width: 400px) {
