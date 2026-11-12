@@ -99,6 +99,8 @@ img { display: block; width: 100%; height: auto; }
 .press-title:hover, .press-title:focus-visible { text-decoration-color: var(--accent); }
 .press-source { margin-top: .3rem; color: var(--muted); font-size: .88rem; }
 .press-type { color: var(--accent); font-size: .82rem; font-weight: 650; white-space: nowrap; }
+.press-subtitle { margin-top: clamp(2.5rem, 6vw, 4.5rem); font-size: clamp(1.9rem, 3.6vw, 3.2rem); }
+.press-subtitle + .press-intro { margin-block: .8rem 1.5rem; }
 .press-links { display: flex; flex-wrap: wrap; gap: .6rem 2rem; margin-top: 1.75rem; }
 @media (max-width: 640px) {
   .press-item { grid-template-columns: 1fr; gap: .25rem; }
