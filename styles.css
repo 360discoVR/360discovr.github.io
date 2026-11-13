@@ -156,7 +156,10 @@ html[lang="uk"] .hero h1 { font-size: clamp(4rem, 9.6vw, 9.5rem); }
 .archive-copy p { max-width: 66ch; margin-top: .65rem; color: var(--paper-muted); }
 .archive-project .archive-date { margin: 0 0 .55rem; font-size: .88rem; font-weight: 600; }
 .archive-cover { width: 100%; max-height: 17rem; object-fit: contain; object-position: right top; }
-.archive-project-poster .archive-cover { aspect-ratio: 3 / 2; object-position: center; background: white; }
+.archive-photos { display: grid; gap: 1rem; }
+.archive-photo { margin: 0; }
+.archive-photo figcaption { margin-top: .45rem; color: var(--paper-muted); font-size: .875rem; }
+.archive-project-poster .archive-photos > .archive-cover { aspect-ratio: 3 / 2; object-position: center; background: white; }
 
 @media (max-width: 960px) {
   .work-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
