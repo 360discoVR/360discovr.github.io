@@ -144,9 +144,9 @@ html[lang="uk"] .hero h1 { font-size: clamp(4rem, 9.6vw, 9.5rem); }
 .archive { background: var(--paper); }
 .archive-intro { background: var(--black); }
 .archive-list { color-scheme: light; color: var(--black); }
-.archive-year { display: grid; grid-template-columns: minmax(6rem, .24fr) minmax(0, 1fr); gap: clamp(1rem, 4vw, 4.5rem); padding-block: clamp(1.5rem, 4vw, 3.5rem); border-top: 1px solid #b6aca2; }
+.archive-year { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: clamp(1.25rem, 3vw, 3rem); padding-block: clamp(1.5rem, 3vw, 2.75rem); border-top: 1px solid #b6aca2; }
 .archive-list :is(h2, article, a) { scroll-margin-top: 4.5rem; }
-.archive-year h2 { font-size: clamp(2.55rem, 5.2vw, 5rem); text-wrap: unset; }
+.archive-year h2 { font-size: clamp(2.55rem, 4vw, 3.75rem); text-wrap: unset; }
 .archive-project { padding-block: 1.5rem; }
 .archive-project:first-child { padding-top: 0; }
 .archive-project:last-child { padding-bottom: 0; }
@@ -159,7 +159,32 @@ html[lang="uk"] .hero h1 { font-size: clamp(4rem, 9.6vw, 9.5rem); }
 .archive-photos { display: grid; gap: 1rem; }
 .archive-photo { margin: 0; }
 .archive-photo figcaption { margin-top: .45rem; color: var(--paper-muted); font-size: .875rem; }
-.archive-project-poster .archive-photos > .archive-cover { aspect-ratio: 3 / 2; object-position: center; background: white; }
+.archive-project-media:has(> .archive-photos > :nth-child(2)) { grid-template-columns: minmax(0, 1fr); gap: 1rem; }
+.archive-photos:has(> :nth-child(2)) {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(.65rem, 1.5vw, 1rem);
+}
+.archive-photos:has(> :nth-child(2)) > .archive-cover,
+.archive-photos:has(> :nth-child(2)) .archive-photo img {
+  aspect-ratio: 4 / 3;
+  max-height: none;
+  object-fit: contain;
+  object-position: center;
+  background: #e6e1d7;
+}
+.archive-project-poster .archive-photos > .archive-cover { background: white; }
+
+@media (min-width: 760px) {
+  .archive-photos:has(> :nth-child(3):last-child) { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+@media (min-width: 1040px) {
+  .archive-photos:has(> :nth-child(4):last-child) { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
+@media (max-width: 759px) {
+  .archive-photos:has(> :nth-child(3):last-child) > .archive-cover { grid-column: 1 / -1; max-height: 14rem; }
+}
 
 @media (max-width: 960px) {
   .work-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -204,7 +229,7 @@ html[lang="uk"] .hero h1 { font-size: clamp(4rem, 9.6vw, 9.5rem); }
   .footer { flex-wrap: wrap; }
   .footer .brand { flex-basis: 100%; }
   .archive-year, .archive-project-media { grid-template-columns: 1fr; gap: 1rem; }
-  .archive-project-media:not(.archive-project-poster) .archive-cover { object-position: left top; }
+  .archive-project-media > .archive-cover { object-position: left top; }
 }
 
 @media (max-width: 400px) {
