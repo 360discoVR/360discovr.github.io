@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>ART3M VR Player — плеєр 360° для Meta Quest</title>
+<meta name="description" content="Плеєр 360°, 180° і 3D-відео, фото й прямих трансляцій для Meta Quest: простий для глядача, керований для стенду та інформативний для фахівця. Альфа-тест за запрошенням.">
+<meta property="og:title" content="ART3M VR Player — плеєр 360° для Meta Quest">
+<meta property="og:description" content="360°, 180°, 3D, прямі трансляції й відео з комп'ютера через Wi-Fi. Шукаємо тестувальників.">
+<link rel="canonical" href="https://360discovr.com/player/">
+<link rel="alternate" hreflang="uk" href="https://360discovr.com/player/">
+<link rel="alternate" hreflang="en" href="https://360discovr.com/player/en/">
+<link rel="alternate" hreflang="x-default" href="https://360discovr.com/player/">
+<meta property="og:url" content="https://360discovr.com/player/">
+<meta property="og:image" content="https://360discovr.com/player/img/cover.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="topbar">
+      <a class="brand" href="/" aria-label="На головну 360discoVR">
+        <svg viewBox="0 0 108 82" aria-hidden="true">
+          <path d="M36 8 L90 41 L36 74 Z" fill="rgba(255,255,255,.10)" stroke="rgba(255,255,255,.30)" stroke-width="1.5" stroke-linejoin="round"/>
+          <path d="M24 8 L78 41 L24 74 Z" fill="rgba(255,84,46,.38)" stroke="rgba(255,138,100,.65)" stroke-width="1.5" stroke-linejoin="round"/>
+          <path d="M12 8 L66 41 L12 74 Z" fill="rgba(255,255,255,.94)" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/>
+        </svg>
+        <div class="word">ART<b>3</b>M<small>VR PLAYER</small></div>
+      </a>
+      <nav class="lang" aria-label="Мова й навігація"><a href="/">360discoVR ↗</a><a href="./" aria-current="page">УКР</a><a href="en/" hreflang="en">EN</a></nav>
+    </div>
+    <h1 class="lead" style="font:inherit;font-size:1.18rem;line-height:1.55">Плеєр 360°, 180° і 3D-відео, фото й прямих трансляцій для Meta Quest. Простий для глядача, керований для оператора стенду й інформативний для фахівця, який перевіряє матеріал. Усе налаштовується в самому шоломі — без хмарного сервісу, облікового запису й зовнішнього пульта.</h1>
+    <div class="facts">
+      <span class="chip on">Альфа-тест · 1.27</span>
+      <span class="chip">Meta Quest 2 · Pro · 3 · 3S</span>
+      <span class="chip">до 8K</span>
+      <span class="chip">Українська · English</span>
+    </div>
+    <div class="cta">
+      <a class="btn primary" href="https://www.meta.com/s/8lkIFujXn" target="_blank" rel="noopener">Встановити альфа-версію з Meta Horizon Store</a>
+      <a class="btn" href="#testers">Як тестувати</a>
+      <a class="btn" href="#features">Що вміє плеєр</a>
+    </div>
+    <figure class="shot cover"><img src="img/cover.jpg" alt="ART3M VR Player: знак із трьох шарів Play над панорамою Києва й Дніпра" width="1600" height="900"></figure>
+  </div>
+</header>
+
+<nav class="toc" aria-label="Розділи"><div class="wrap">
+  <a href="#features">Можливості</a><a href="#modes">Режими</a><a href="#cases">Сценарії</a><a href="#screens">Екрани</a><a class="hl" href="#testers">Тестувальникам</a><a href="#limits">Обмеження</a><a href="#contact">Контакти</a>
+</div></nav>
+
+<main>
+<section id="features"><div class="wrap">
+  <span class="eyebrow">Можливості</span>
+  <h2>Усе для 360-відео в одному шоломі</h2>
+  <div class="features">
+    <article class="feature">
+      <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18"/></svg></div>
+      <h3>Основні формати кадру</h3>
+      <p>360° і 180°, 3D верх-низ і ліво-право (VR180), плаский 2D-екран. Формат береться з назви файлу або вибирається одним натисканням і запам'ятовується для кожного відео. До 8K — у межах апаратного декодера Quest.</p>
+    </article>
+    <article class="feature">
+      <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M8 3l4 3 4-3"/><circle cx="12" cy="12" r="2"/></svg></div>
+      <h3>Прямі трансляції</h3>
+      <p>HLS, DASH, RTSP, RTMP і WebRTC (WHEP); WebRTC призначений для трансляцій із малою затримкою. Трансляцію додають через просту форму: вказують сервер, порт і назву потоку. Якщо зв'язок обірветься, плеєр чекатиме на відновлення й підключиться знову.</p>
+    </article>
+    <article class="feature">
+      <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/><path d="M8 10h8"/></svg></div>
+      <h3>Відео з комп'ютера через Wi-Fi</h3>
+      <p>Відкрийте спільну папку на Windows чи Mac — і дивіться відео без кабелю або завантажте великий файл на шолом. Плеєр пам'ятає останню папку, а інструкція з налаштування доступна прямо на екрані.</p>
+    </article>
+    <article class="feature">
+      <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></div>
+      <h3>Бібліотека</h3>
+      <p>Плитки з мініатюрами, тривалістю, роздільністю й позначкою «переглянуто»; фільтри «Відео / Фото / Live». Відео з будь-якої папки шолома або з флешки. Субтитри <code>.srt</code> / <code>.vtt</code> поруч із файлом.</p>
+    </article>
+    <article class="feature">
+      <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div>
+      <h3>Інструменти фахівця</h3>
+      <p>Поворот, нахил, горизонт і сітка горизонту; яскравість і контраст; «Про файл» (кодек, бітрейт, колір і HDR, просторові метадані); гістограма й зебра; статистика відтворення; порівняння двох версій; нотатки з таймкодом.</p>
+    </article>
+    <article class="feature">
+      <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V9l7-5 7 5v12"/><path d="M10 21v-6h4v6"/></svg></div>
+      <h3>Expo для стендів і музеїв</h3>
+      <p>Глядач не бачить меню: плитки, циклічне відтворення одного відео, плейлист або трансляція. Майстер налаштування складається з трьох кроків, а вихід захищено жестом і PIN-кодом для оператора. Коли наступний глядач надягає шолом, починається новий сеанс. Налаштуйте один шолом і скопіюйте папку на інші.</p>
+    </article>
+    <article class="feature">
+      <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/></svg></div>
+      <h3>Контролер або погляд</h3>
+      <p>З контролером використовуйте промінь і тригер; без контролера — просто дивіться на кнопку. Знак «?» біля складних налаштувань відкриває пояснення простими словами. Інтерфейс доступний українською й англійською.</p>
+    </article>
+    <article class="feature">
+      <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></div>
+      <h3>Приватність</h3>
+      <p>Без облікового запису, реклами й хмарного сервісу. Інтернет потрібен лише для трансляцій. Технічний журнал зберігається на шоломі й нікуди не надсилається автоматично — ви самі вирішуєте, чи передавати звіт розробнику.</p>
+    </article>
+  </div>
+</div></section>
+
+<section id="modes"><div class="wrap">
+  <span class="eyebrow">Три режими</span>
+  <h2>Один плеєр — три способи працювати з ним</h2>
+  <p class="sub">Режим перемикається у верхній частині налаштувань і визначає, що бачить людина, які параметри їй доступні та як завершити перегляд.</p>
+  <div class="modes">
+    <article class="mode">
+      <span class="tag">ПРОСТИЙ</span>
+      <h3>Простий</h3>
+      <p class="who">Для того, хто просто дивиться: вдома, у гостях, на презентації.</p>
+      <ul>
+        <li>Бібліотека плиток і привітання з трьома кроками, поки вона порожня</li>
+        <li>Кнопка формату розгортає всі варіанти одним рядом</li>
+        <li>Налаштування — чотири зрозумілі групи без технічних слів</li>
+        <li>«Перед» відео — завжди там, де дивиться глядач</li>
+      </ul>
+    </article>
+    <article class="mode pro">
+      <span class="tag">ПРОФЕСІЙНИЙ</span>
+      <h3>Професійний</h3>
+      <p class="who">Для оператора, монтажера, автора 360-зйомки.</p>
+      <ul>
+        <li>Панель «Інструменти» під час відтворення: формат, поворот, горизонт, світло, звук, перевірка, статистика, порівняння, «Про файл»</li>
+        <li>Інструменти можна розкласти навколо себе окремими панелями</li>
+        <li>Налаштування для кожного відео окремо</li>
+        <li>Огляд будь-якої папки, флешки й комп'ютера в мережі</li>
+      </ul>
+    </article>
+    <article class="mode">
+      <span class="tag">EXPO</span>
+      <h3>Expo</h3>
+      <p class="who">Для стенду, музею, виставки: глядач меню не бачить.</p>
+      <ul>
+        <li>Плитки, одне відео, плейлист або трансляція</li>
+        <li>Майстер у 3 кроки з перевіркою жесту виходу</li>
+        <li>Вихід оператора: утримати «Меню» або подивитися в підлогу чи стелю, далі PIN</li>
+        <li>«Перевірка стенду» перед відкриттям</li>
+      </ul>
+    </article>
+  </div>
+</div></section>
+
+<section id="cases"><div class="wrap">
+  <span class="eyebrow">Сценарії</span>
+  <h2>Де плеєр уже має сенс</h2>
+  <div class="cases">
+    <article class="case"><h3>Туристичний стенд на виставці</h3><p>Десяток 360-відео міста, черга відвідувачів, один оператор на кілька шоломів.</p><p class="how"><b>Expo · плитки.</b> Глядач сам вибирає відео, а після перегляду повертається до плиток. Коли шолом знімають, сеанс скидається для наступного відвідувача.</p></article>
+    <article class="case"><h3>Музейна інсталяція</h3><p>Один фільм без жодного інтерфейсу цілий день.</p><p class="how"><b>Expo · одне відео.</b> Чистий кадр: ні панелей, ні прицілу. Безшовний повтор і скидання, коли шолом довго лежить без руху.</p></article>
+    <article class="case"><h3>Пряма трансляція з події</h3><p>Камера 360 на сцені, ноутбук із сервером трансляцій, глядачі в шоломах у залі.</p><p class="how"><b>RTMP · RTSP · HLS · WebRTC.</b> У разі обриву з'являється повідомлення «Трансляція скоро почнеться», а плеєр автоматично підключається знову.</p></article>
+    <article class="case"><h3>Перевірка матеріалу</h3><p>Чи правильні метадані, чи рівний горизонт, чи є відео HDR і чи впорається Quest із його бітрейтом.</p><p class="how"><b>Професійний · «Про файл», «Світло», «Перевірка».</b> Нотатки з таймкодом записуються поруч із відео.</p></article>
+    <article class="case"><h3>Презентація клієнту</h3><p>Агенція показує готовий проєкт у переговорній — прямо з ноутбука через Wi-Fi.</p><p class="how"><b>Комп'ютер у мережі</b> або <b>Expo · плейлист</b>. Поворот і формат запам'ятовуються для кожного відео.</p></article>
+    <article class="case"><h3>Домашній перегляд</h3><p>Людина вперше надягнула Quest і хоче подивитися свої 360-відео з телефона чи камери.</p><p class="how"><b>Простий.</b> Достатньо скопіювати файли в папку й почати перегляд. Керувати можна поглядом, без контролера.</p></article>
+  </div>
+</div></section>
+
+<section id="screens"><div class="wrap">
+  <span class="eyebrow">Екрани</span>
+  <h2>Як це виглядає в шоломі</h2>
+  <p class="sub">Напівпрозорі скляні панелі поверх відео. Знімки створено тим самим кодом, що працює в шоломі.</p>
+  <div class="gallery">
+    <figure class="shot wide"><img src="img/library_uk.jpg" alt="Бібліотека: плитки з мініатюрами, форматом, тривалістю й розміром" loading="lazy" width="1600" height="1000"><figcaption>Бібліотека: формат, тривалість, роздільність, «Нове» й «переглянуто»</figcaption></figure>
+    <figure class="shot"><img src="img/controls_format_uk.jpg" alt="Панель відео й вибір формату кадру" loading="lazy" width="1600" height="1000"><figcaption>Панель відео: формат кадру — одним натисканням</figcaption></figure>
+    <figure class="shot"><img src="img/advanced_1_uk.jpg" alt="Інструменти: формат, поворот, нахил, горизонт" loading="lazy" width="1600" height="1000"><figcaption>«Інструменти»: поворот, нахил, горизонт і сітка горизонту</figcaption></figure>
+    <figure class="shot"><img src="img/advanced_4_uk.jpg" alt="Про файл: кодек, бітрейт, звук, формат" loading="lazy" width="1600" height="1000"><figcaption>«Про файл»: камера, кодек, бітрейт, амбісоніка й оцінка сумісності з Quest</figcaption></figure>
+    <figure class="shot"><img src="img/advanced_5_uk.jpg" alt="Перевірка: нотатки й стрибки погляду" loading="lazy" width="1600" height="1000"><figcaption>«Перевірка»: нотатки з таймкодом, перевірка нижньої точки та швів панорами</figcaption></figure>
+    <figure class="shot"><img src="img/network_folder_uk.jpg" alt="Спільна папка на комп'ютері" loading="lazy" width="1600" height="1000"><figcaption>Комп'ютер у мережі: «Дивитися» або «Завантажити на шолом»</figcaption></figure>
+    <figure class="shot"><img src="img/network_search_uk.jpg" alt="Інструкція зі спільного доступу до папки" loading="lazy" width="1600" height="1000"><figcaption>Як відкрити папку на ПК — прямо на екрані</figcaption></figure>
+    <figure class="shot"><img src="img/streams_form_uk.jpg" alt="Форма трансляції" loading="lazy" width="1600" height="1000"><figcaption>Трансляція — форма замість довгого посилання</figcaption></figure>
+    <figure class="shot"><img src="img/settings_simple_uk.jpg" alt="Налаштування Простого режиму" loading="lazy" width="1600" height="1000"><figcaption>Простий режим: чотири групи налаштувань</figcaption></figure>
+    <figure class="shot"><img src="img/wizard_1_uk.jpg" alt="Майстер Expo, крок 1" loading="lazy" width="1600" height="1000"><figcaption>Майстер Expo: що побачить глядач</figcaption></figure>
+    <figure class="shot"><img src="img/picker_uk.jpg" alt="Вибір вмісту Expo мініатюрами" loading="lazy" width="1600" height="1000"><figcaption>Вміст стенду — мініатюрами</figcaption></figure>
+    <figure class="shot"><img src="img/operator_uk.jpg" alt="Меню оператора" loading="lazy" width="1600" height="1000"><figcaption>Меню оператора поверх показу</figcaption></figure>
+    <figure class="shot"><img src="img/settings_7_uk.jpg" alt="Налаштування — Система, звіт для розробника" loading="lazy" width="1600" height="1000"><figcaption>Система: «Звіт для розробника» одним натисканням</figcaption></figure>
+  </div>
+</div></section>
+
+<section id="testers" class="testers"><div class="wrap">
+  <span class="eyebrow">Тестувальникам</span>
+  <h2>Допоможіть зробити плеєр кращим</h2>
+  <p class="sub">ART3M VR Player зараз проходить альфа-тестування за запрошенням у Meta Horizon Store. Шукаємо людей із будь-якої країни, які знімають, монтують або показують 360-відео чи проводять події з трансляціями. Для участі потрібен шолом Meta Quest 2, Pro, 3 або 3S.</p>
+
+  <div class="two">
+    <div class="box">
+      <h3>Як приєднатися</h3>
+      <ol class="steps">
+        <li><span>Відкрийте запрошення в альфа-канал: <a href="https://www.meta.com/s/8lkIFujXn" target="_blank" rel="noopener">meta.com/s/8lkIFujXn</a><span class="t">У браузері на телефоні чи комп'ютері. Увійдіть у той самий обліковий запис Meta, що й на шоломі, і прийміть запрошення.</span></span></li>
+        <li><span>Встановіть ART3M VR Player з Meta Horizon Store — у шоломі або в застосунку Meta Horizon на телефоні.<span class="t">Оновлення встановлюються автоматично, як і для інших застосунків.</span></span></li>
+        <li><span>Під час першого запуску дозвольте «Доступ до всіх файлів».<span class="t">Дозвіл потрібен, щоб застосунок міг читати відео, списки трансляцій і налаштування, які ви самі скопіювали до папки ART3M. Без нього відео відтворюються, але імпортовані списки й налаштування недоступні.</span></span></li>
+        <li><span>Напишіть на <a href="mailto:artemkysliakov@gmail.com?subject=ART3M%20Alpha">artemkysliakov@gmail.com</a>, що приєдналися до тестування, і вкажіть модель шолома.<span class="t">Якщо хочете отримувати повідомлення про нові версії, зазначте це в листі. Якщо посилання не відкривається, також напишіть.</span></span></li>
+      </ol>
+      <a class="btn primary" style="align-self:flex-start" href="https://www.meta.com/s/8lkIFujXn" target="_blank" rel="noopener">Встановити альфа-версію з Meta Horizon Store</a>
+    </div>
+    <div class="box">
+      <h3>Свої відео — на шолом</h3>
+      <ol class="steps">
+        <li><span>Підключіть шолом кабелем USB-C і в шоломі дозвольте доступ до даних.</span></li>
+        <li><span>Скопіюйте відео й фото в <code>Quest › Movies › ART3M</code>.</span></li>
+        <li><span>У бібліотеці натисніть стрілку оновлення.<span class="t">360° — за замовчуванням. Для інших форматів додайте в назву: <code>_180</code>, <code>_TB</code> (3D верх-низ), <code>_LR</code> (3D ліво-право), <code>_2D</code>. Або виберіть формат кнопкою під час перегляду.</span></span></li>
+      </ol>
+      <p class="note">Без кабелю: «Додати» → «Комп'ютер у мережі…» — відео зі спільної папки Windows або Mac через Wi-Fi.</p>
+    </div>
+  </div>
+
+  <h3>Що перевірити (≈ 15 хвилин)</h3>
+  <div class="tablebox"><table class="spec">
+    <thead><tr><th>Сценарій</th><th>На що звернути увагу</th></tr></thead>
+    <tr><th>1. Відео на шоломі</th><td>Плитки з мініатюрами; відео швидко запускається; напрямок погляду вперед відповідає передній частині панорами; панель відкривається тригером або поглядом униз.</td></tr>
+    <tr><th>2. Формати</th><td>Під час відтворення доступна кнопка вибору формату: 360 / 180 / 3D / 2D. Вибір запам'ятовується для цього відео.</td></tr>
+    <tr><th>3. Комп'ютер у мережі</th><td>«Додати» → «Комп'ютер у мережі…» → знайти чи ввести ПК → увійти → відкрити папку → «Дивитися» і «Завантажити на шолом».</td></tr>
+    <tr><th>4. Трансляція</th><td>Якщо маєте сервер (OBS, MediaMTX тощо): Налаштування → Трансляції → «Додати» → «Дивитися». Вимкніть і ввімкніть сервер — плеєр має дочекатися сам.</td></tr>
+    <tr><th>5. Режими</th><td>Шапка налаштувань: Простий / Професійний / Expo. У Expo пройдіть майстер, перевірте жест виходу й запустіть показ.</td></tr>
+    <tr><th>6. Зняти й надягнути</th><td>Зніміть шолом під час відтворення й надягніть знову.</td></tr>
+  </table></div>
+
+  <div class="two">
+    <div class="box">
+      <h3>Як надіслати звіт</h3>
+      <ol class="steps">
+        <li><span>Налаштування (шестірня) → «Система» → «Звіт для розробника» → «Зберегти звіт».<span class="t">Під кнопкою з'явиться шлях: <code>Quest › Movies › ART3M › reports › ART3M_report_ДАТА.jsonl</code>.</span></span></li>
+        <li><span>Підключіть шолом кабелем, дозвольте доступ до даних і скопіюйте найновіший файл із папки <code>Movies/ART3M/reports</code>.<span class="t">На Mac — через Android File Transfer або OpenMTP.</span></span></li>
+        <li><span>Надішліть файл на <a href="mailto:artemkysliakov@gmail.com?subject=ART3M%20report">artemkysliakov@gmail.com</a> із темою «ART3M report».<span class="t">Додайте одне-два речення: що пішло не так і коли. Знімки екрана (кнопка Meta + курок) лежать у <code>Quest › Oculus › Screenshots</code>.</span></span></li>
+      </ol>
+    </div>
+    <div class="box ok">
+      <h3>Що є у звіті</h3>
+      <ul>
+        <li>Версія плеєра, модель шолома, мова, режим роботи</li>
+        <li>Які екрани відкривали й скільки на них були, які кнопки натискали</li>
+        <li>Якість відтворення: тип джерела, старт, зупинки, пропущені кадри, роздільність, к/с, бітрейт</li>
+        <li>Wi-Fi: діапазон (2,4 / 5 ГГц), швидкість і сигнал</li>
+        <li>Плавність, заряд і температура, неочікувані закриття, помилки</li>
+      </ul>
+      <h3>Які дані не записуються у звіт</h3>
+      <ul>
+        <li>Назв файлів, адрес трансляцій і сайтів, IP-адрес</li>
+        <li>Імен комп'ютерів і користувачів, паролів, PIN, набраного тексту, назви Wi-Fi</li>
+      </ul>
+      <p class="note">Журнал нікуди не надсилається автоматично. Якщо ви надішлете файл електронною поштою, його отримає розробник і використає лише для діагностики та вдосконалення плеєра. Попросити видалити надісланий звіт можна за тією самою адресою. Журнал можна вимкнути в Налаштування → Система → «Журнал використання».</p>
+    </div>
+  </div>
+
+  <div class="box no">
+    <h3>Корисно знати</h3>
+    <ul>
+      <li>Трансляції й відео з комп'ютера у 4K–8K потребують Wi-Fi 5 ГГц; на 2,4 ГГц важкі файли зупиняються — тоді «Завантажити на шолом».</li>
+      <li>HDR-відео показується як звичайне (виглядає блідіше) — плеєр попереджає про це в «Про файл».</li>
+      <li>Знайшли проблему, але звіт зберегти не вийшло? Просто напишіть, що сталося, — і цього достатньо.</li>
+    </ul>
+  </div>
+</div></section>
+
+<section id="limits"><div class="wrap">
+  <span class="eyebrow">Обмеження й плани</span>
+  <h2>Чесно про те, чого ще немає</h2>
+  <div class="limits">
+    <div class="box">
+      <h3>Відомі обмеження</h3>
+      <ul>
+        <li>HDR (PQ / HLG) показується як SDR, без тонмапінгу.</li>
+        <li>Амбісоніку розпізнано, але звук ще не повертається за головою.</li>
+        <li>Fisheye 180 / 190 / 200 без склейки не підтримується.</li>
+        <li>Звичайний застосунок не може заблокувати кнопку Meta; для повного кіоску потрібні Meta Horizon managed solutions або ArborXR.</li>
+        <li>Для відео 4K–8K через Wi-Fi 2,4 ГГц рекомендовано спочатку завантажити файл на шолом.</li>
+      </ul>
+    </div>
+    <div class="box">
+      <h3>Наступне — за вашими відгуками</h3>
+      <ul>
+        <li>Підказка про слабкий Wi-Fi ще до старту трансляції.</li>
+        <li>Автоматичний перехід на нижчу якість трансляції, коли мережа не встигає.</li>
+        <li>Fisheye, passthrough-фон меню на Quest 3, зсув стерео.</li>
+        <li>Ваші пропозиції — пишіть, що найважливіше саме для вас.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="limits">
+    <div class="box">
+      <h3>Питання до тих, хто знімає 360</h3>
+      <ol class="q">
+        <li><span>Що ви перевіряєте у файлі першим перед показом клієнту — і чого бракує у «Про файл»?</span></li>
+        <li><span>Застосовувати формат із метаданих автоматично чи лишати вибір людині?</span></li>
+        <li><span>З якими камерами й форматами ви працюєте на подіях (8K60, VR180, fisheye)?</span></li>
+      </ol>
+    </div>
+    <div class="box">
+      <h3>Питання до тих, хто показує</h3>
+      <ol class="q">
+        <li><span>Чи зрозумілий жест виходу оператора (погляд у підлогу / стелю) людям, що бачать Quest уперше?</span></li>
+        <li><span>Скільки шоломів у вас на стенді й як ви їх зараз налаштовуєте?</span></li>
+        <li><span>Що найчастіше дає збій під час трансляцій на подіях?</span></li>
+      </ol>
+    </div>
+  </div>
+</div></section>
+</main>
+
+<footer id="contact"><div class="wrap">
+  <h3 style="color:var(--fg)">Контакти</h3>
+  <p>Відгуки, звіти й запит на альфа-тест: <a class="mail" href="mailto:artemkysliakov@gmail.com">artemkysliakov@gmail.com</a></p>
+  <p>ART3M VR Player · альфа 1.27 · листопад 2026 · <a href="https://360discovr.com">360discovr.com</a></p>
+</div></footer>
+</body>
+</html>
