@@ -118,6 +118,11 @@ footer{padding-block:56px 64px;color:var(--muted);font-size:.88rem}
 footer .wrap{display:flex;flex-direction:column;gap:6px}
 
 .word{white-space:nowrap}
+/* Keep the layered mark visible against a light background. */
+@media (prefers-color-scheme: light){:root:not([data-theme="dark"]) .brand svg path:nth-child(1){fill:rgba(22,24,29,.08);stroke:rgba(22,24,29,.30)}
+  :root:not([data-theme="dark"]) .brand svg path:nth-child(3){fill:#16181d;stroke:#16181d}}
+:root[data-theme="light"] .brand svg path:nth-child(1){fill:rgba(22,24,29,.08);stroke:rgba(22,24,29,.30)}
+:root[data-theme="light"] .brand svg path:nth-child(3){fill:#16181d;stroke:#16181d}
 @media (max-width:520px){
   .brand{gap:10px}
   .brand svg{width:42px}
