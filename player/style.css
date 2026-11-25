@@ -118,7 +118,7 @@ footer{padding-block:56px 64px;color:var(--muted);font-size:.88rem}
 footer .wrap{display:flex;flex-direction:column;gap:6px}
 
 .word{white-space:nowrap}
-/* Keep the layered mark visible against a light background. */
+/* Знак у світлій темі: білий передній шар і світлий задній на світлому тлі зникали — робимо їх темними. */
 @media (prefers-color-scheme: light){:root:not([data-theme="dark"]) .brand svg path:nth-child(1){fill:rgba(22,24,29,.08);stroke:rgba(22,24,29,.30)}
   :root:not([data-theme="dark"]) .brand svg path:nth-child(3){fill:#16181d;stroke:#16181d}}
 :root[data-theme="light"] .brand svg path:nth-child(1){fill:rgba(22,24,29,.08);stroke:rgba(22,24,29,.30)}
@@ -133,3 +133,4 @@ footer .wrap{display:flex;flex-direction:column;gap:6px}
   .modes,.limits,.two,.gallery{grid-template-columns:minmax(0,1fr)}
   .spec th{width:auto}
 }
+a.chip{text-decoration:none}a.chip:hover{border-color:var(--accent)}

@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>What’s new — ART3M VR Player</title>
+<meta name="description" content="What’s new in ART3M VR Player for Meta Quest: changes in every alpha release.">
+<link rel="canonical" href="https://360discovr.com/player/en/updates">
+<link rel="alternate" hreflang="uk" href="https://360discovr.com/player/updates">
+<link rel="alternate" hreflang="en" href="https://360discovr.com/player/en/updates">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;700&display=swap">
+<link rel="stylesheet" href="../style.css">
+<style>
+  .rel h2{margin-top:8px;display:flex;flex-wrap:wrap;align-items:baseline;gap:12px}
+  .rel h2 .note{font:500 .9rem/1 var(--mono)}
+  .rel li{max-width:75ch}
+  .rel h3{font-size:1rem;margin-top:6px}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="topbar">
+      <a class="brand" href="./" style="color:inherit;text-decoration:none">
+        <svg viewBox="0 0 108 82" aria-hidden="true">
+          <path d="M36 8 L90 41 L36 74 Z" fill="rgba(255,255,255,.10)" stroke="rgba(255,255,255,.30)" stroke-width="1.5" stroke-linejoin="round"/>
+          <path d="M24 8 L78 41 L24 74 Z" fill="rgba(255,84,46,.38)" stroke="rgba(255,138,100,.65)" stroke-width="1.5" stroke-linejoin="round"/>
+          <path d="M12 8 L66 41 L12 74 Z" fill="rgba(255,255,255,.94)" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/>
+        </svg>
+        <div class="word">ART<b>3</b>M<small>VR PLAYER</small></div>
+      </a>
+      <nav class="lang" aria-label="Language"><a href="../updates.html" hreflang="uk">УКР</a><a href="updates.html" aria-current="page">EN</a></nav>
+    </div>
+    <h1 style="font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;margin-top:18px">What’s new</h1>
+    <p class="lead">Changes in ART3M VR Player alpha releases. Existing testers get updates from the Meta Horizon Store automatically. <a href="./#testers">How to join the alpha</a></p>
+  </div>
+</header>
+
+<main class="rel">
+
+<section id="v1-30-14"><div class="wrap">
+  <h2>1.30.14 <span class="note">24 November 2026</span></h2>
+  <div class="box ok">
+    <ul>
+      <li>RTSP streams play again: before, they stopped after the first frame (any codec, 4K and 8K). 8K H.265 works over RTSP.</li>
+      <li>Stream codecs, honestly: H.264 over every protocol; H.265 (HEVC) over RTSP, HLS and DASH. RTMP and WebRTC take H.264 only. Help → “Connecting a stream”.</li>
+      <li>Report for the developer: the saved file now shows on the computer over the USB cable right away (before, the reports folder could look empty until a restart). If saving fails, the reason is shown under the button.</li>
+    </ul>
+  </div>
+</div></section>
+
+<section id="v1-30-11"><div class="wrap">
+  <h2>1.30.11 <span class="note">22 November 2026</span></h2>
+  <div class="box">
+    <h3>New</h3>
+    <ul>
+      <li>Player panel: icons instead of words — tiles open the library, sliders open Advanced. A small ✕ above the panel hides it right away.</li>
+      <li>Advanced during a video: next to the controls or centred with a compact bar — library, ±10 s, pause, seek, volume, close. Settings → Playback → “Advanced during a video”.</li>
+      <li>Help in the headset: search with a “Search” key, topics (Get started, Picture or sound, Network, Expo), long articles scroll with Up / Down (by gaze too), “Open” jumps to the exact setting and highlights it.</li>
+      <li>Hand control: pinch thumb and index finger to click, like the controller trigger. In Expo mode hands don’t interfere with the show.</li>
+      <li>WebRTC (WHEP) — live streams with under a second of delay.</li>
+      <li>Controllers in the player look the same as in the Quest system.</li>
+    </ul>
+    <h3>Fixed and improved</h3>
+    <ul>
+      <li>Library: frames for 8K videos; clear tile states — Creating, No access, Frame unavailable; streams marked with an icon.</li>
+      <li>“Save for this video” tells the truth: saved on the headset, written next to the video, or failed — and the newest save wins after a restart.</li>
+      <li>The Expo wizard shows the same exit timing the player actually uses.</li>
+      <li>The usage journal and the developer report no longer contain addresses, file names, paths or what you type.</li>
+    </ul>
+  </div>
+</div></section>
+
+<section id="v1-27-2"><div class="wrap">
+  <h2>1.27.2 <span class="note">21 November 2026</span></h2>
+  <div class="box">
+    <ul>
+      <li>The seek bar and value sliders land exactly where you aimed: the small jerk of the hand when releasing the trigger no longer moves them.</li>
+      <li>Meta Horizon Store purchase check (works offline).</li>
+    </ul>
+  </div>
+</div></section>
+
+<section id="v1-27-1"><div class="wrap">
+  <h2>1.27.1 <span class="note">16 November 2026</span></h2>
+  <div class="box">
+    <ul>
+      <li>HLS, DASH and WebRTC streams work again; a dropped stream reconnects quietly under one waiting message.</li>
+      <li>Computer on the network: the guide is shown right away, the last folder opens directly, clear messages when Wi‑Fi is too slow, “Download to headset” right from the message.</li>
+      <li>Keyboard: delete key next to the digits, “Show” for passwords.</li>
+      <li>Simple mode never rotates videos.</li>
+      <li>Settings → System: anonymous usage journal and “Report for the developer”. What it contains and what it doesn’t — <a href="privacy.html">privacy policy</a>.</li>
+    </ul>
+  </div>
+</div></section>
+
+</main>
+
+<footer id="contact"><div class="wrap">
+  <p>Feedback and reports: <a class="mail" href="mailto:artemkysliakov@gmail.com">artemkysliakov@gmail.com</a></p>
+  <p><a href="./">ART3M VR Player</a> · <a href="privacy.html">Privacy policy</a> · <a href="https://360discovr.com">360discovr.com</a></p>
+</div></footer>
+</body>
+</html>

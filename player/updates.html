@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Що нового — ART3M VR Player</title>
+<meta name="description" content="Що нового в ART3M VR Player для Meta Quest: зміни в кожній альфа-версії.">
+<link rel="canonical" href="https://360discovr.com/player/updates">
+<link rel="alternate" hreflang="uk" href="https://360discovr.com/player/updates">
+<link rel="alternate" hreflang="en" href="https://360discovr.com/player/en/updates">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;700&display=swap">
+<link rel="stylesheet" href="style.css">
+<style>
+  .rel h2{margin-top:8px;display:flex;flex-wrap:wrap;align-items:baseline;gap:12px}
+  .rel h2 .note{font:500 .9rem/1 var(--mono)}
+  .rel li{max-width:75ch}
+  .rel h3{font-size:1rem;margin-top:6px}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="topbar">
+      <a class="brand" href="./" style="color:inherit;text-decoration:none">
+        <svg viewBox="0 0 108 82" aria-hidden="true">
+          <path d="M36 8 L90 41 L36 74 Z" fill="rgba(255,255,255,.10)" stroke="rgba(255,255,255,.30)" stroke-width="1.5" stroke-linejoin="round"/>
+          <path d="M24 8 L78 41 L24 74 Z" fill="rgba(255,84,46,.38)" stroke="rgba(255,138,100,.65)" stroke-width="1.5" stroke-linejoin="round"/>
+          <path d="M12 8 L66 41 L12 74 Z" fill="rgba(255,255,255,.94)" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/>
+        </svg>
+        <div class="word">ART<b>3</b>M<small>VR PLAYER</small></div>
+      </a>
+      <nav class="lang" aria-label="Мова"><a href="updates.html" aria-current="page">УКР</a><a href="en/updates.html" hreflang="en">EN</a></nav>
+    </div>
+    <h1 style="font-size:clamp(1.8rem,4vw,2.6rem);font-weight:800;margin-top:18px">Що нового</h1>
+    <p class="lead">Зміни в альфа-версіях ART3M VR Player. Ті, хто вже тестує, отримують оновлення з Meta Horizon Store самі. <a href="./#testers">Як долучитися до тестування</a></p>
+  </div>
+</header>
+
+<main class="rel">
+
+<section id="v1-30-14"><div class="wrap">
+  <h2>1.30.14 <span class="note">24 листопада 2026</span></h2>
+  <div class="box ok">
+    <ul>
+      <li>RTSP-трансляції знову грають: раніше вони зупинялися після першого кадру (з будь-яким кодеком, 4K і 8K). 8K H.265 працює через RTSP.</li>
+      <li>Чесно про кодеки трансляцій: H.264 — через усі протоколи; H.265 (HEVC) — через RTSP, HLS і DASH. RTMP і WebRTC приймають лише H.264. Довідка → «Як підключити трансляцію».</li>
+      <li>Звіт для розробника: збережений файл одразу видно на комп’ютері через кабель (раніше папка reports могла здаватися порожньою до перезапуску). Якщо зберегти не вдалося, під кнопкою видно причину.</li>
+    </ul>
+  </div>
+</div></section>
+
+<section id="v1-30-11"><div class="wrap">
+  <h2>1.30.11 <span class="note">22 листопада 2026</span></h2>
+  <div class="box">
+    <h3>Нове</h3>
+    <ul>
+      <li>Панель плеєра — значки замість слів: плитки — бібліотека, повзунки — «Розширено». Маленький ✕ над панеллю ховає її одразу.</li>
+      <li>«Розширено» під час відео: поруч із панеллю або по центру з компактною смугою — бібліотека, ±10 с, пауза, перемотування, гучність, закрити. Налаштування → «Відтворення» → «Розширено під час відео».</li>
+      <li>Довідка в шоломі: пошук із кнопкою «Шукати», теми (Почати, Картинка чи звук, Мережа, Expo), довгі статті гортаються кнопками «Вище / Нижче» (і поглядом), «Відкрити» веде до потрібного налаштування й підсвічує його.</li>
+      <li>Керування руками: щипок великим і вказівним пальцями — як курок контролера. У режимі Expo руки не заважають показу.</li>
+      <li>WebRTC (WHEP) — трансляції із затримкою менше секунди.</li>
+      <li>Контролери в плеєрі виглядають так само, як у системі Quest.</li>
+    </ul>
+    <h3>Виправлено й покращено</h3>
+    <ul>
+      <li>Бібліотека: кадри для відео 8K; зрозумілі стани плиток — «Створюється», «Немає доступу», «Кадр недоступний»; трансляції позначено значком.</li>
+      <li>«Зберегти для цього відео» каже правду: збережено на шоломі, записано поруч із відео чи не вдалося — і після перезапуску діє найновіше збереження.</li>
+      <li>Майстер Expo показує ті самі секунди виходу, що й плеєр.</li>
+      <li>Журнал використання й звіт для розробника більше не містять адрес, назв файлів, шляхів і набраного тексту.</li>
+    </ul>
+  </div>
+</div></section>
+
+<section id="v1-27-2"><div class="wrap">
+  <h2>1.27.2 <span class="note">21 листопада 2026</span></h2>
+  <div class="box">
+    <ul>
+      <li>Смуга перемотування й повзунки стають точно туди, куди ви цілили: легкий рух руки під час відпускання курка більше їх не зсуває.</li>
+      <li>Перевірка покупки Meta Horizon Store (працює без інтернету).</li>
+    </ul>
+  </div>
+</div></section>
+
+<section id="v1-27-1"><div class="wrap">
+  <h2>1.27.1 <span class="note">16 листопада 2026</span></h2>
+  <div class="box">
+    <ul>
+      <li>Трансляції HLS, DASH і WebRTC знову працюють; обірвана трансляція тихо перепідключається під одним повідомленням про очікування.</li>
+      <li>Комп’ютер у мережі: інструкцію видно одразу, остання папка відкривається напряму, зрозумілі повідомлення, коли Wi-Fi не встигає, «Завантажити на шолом» — прямо з повідомлення.</li>
+      <li>Клавіатура: клавіша видалення біля цифр, «Показати» для паролів.</li>
+      <li>Простий режим ніколи не повертає відео.</li>
+      <li>Налаштування → «Система»: анонімний журнал використання й «Звіт для розробника». Що в ньому є і чого немає — <a href="privacy.html">політика конфіденційності</a>.</li>
+    </ul>
+  </div>
+</div></section>
+
+</main>
+
+<footer id="contact"><div class="wrap">
+  <p>Відгуки й звіти: <a class="mail" href="mailto:artemkysliakov@gmail.com">artemkysliakov@gmail.com</a></p>
+  <p><a href="./">ART3M VR Player</a> · <a href="privacy.html">Політика конфіденційності</a> · <a href="https://360discovr.com">360discovr.com</a></p>
+</div></footer>
+</body>
+</html>
